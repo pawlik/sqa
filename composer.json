@@ -1,0 +1,13 @@
+{
+    "name": "gpawlik/tdd",
+    "require": {
+        "phpunit/phpunit": "3.*"
+    },
+    "authors": [
+        {
+            "name": "pawlik",
+            "email": "grzegorzpawlik@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
