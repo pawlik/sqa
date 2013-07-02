@@ -1,0 +1,12 @@
+<phpunit backupGlobals="true"
+         backupStaticAttributes="false"
+         bootstrap=""
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         strict="false"
+         verbose="false">
+  <!-- ... -->
+</phpunit>
