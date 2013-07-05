@@ -9,7 +9,7 @@ namespace RomanNumerals;
 
 class RomanNumerals {
     
-    private $knownChars = ["V" => 5, "X" => 10];
+    private $knownChars = ["I" => 1, "V" => 5, "X" => 10];
 
     public function parse($str = "")
     {
@@ -18,13 +18,12 @@ class RomanNumerals {
         for($i = 0; $i < strlen($str); $i++) {
             $char = $str[$i];
             
-            if($char === "I") {
-                $sum +=1;
-            }
             if($this->isKnownChar($char)) {
                 $value = $this->charValue($char);
                 if($sum < $value) {
                     $sum = $value - $sum;
+                }else {
+                    $sum += $value;
                 }
             }
         }
