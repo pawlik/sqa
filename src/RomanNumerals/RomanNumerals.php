@@ -8,6 +8,8 @@ namespace RomanNumerals;
 
 
 class RomanNumerals {
+    
+    private $knownChars = ["V" => 5, "X" => 10];
 
     public function parse($str = "")
     {
@@ -19,23 +21,23 @@ class RomanNumerals {
             if($char === "I") {
                 $sum +=1;
             }
-            if($char === "V") {
-                if($sum < 5) {
-                    $sum = 5 - $sum;
-                }
-            }
-            if($char === "X") {
-                if($sum < 10) {
-                    $sum = 10 - $sum;
+            if($this->isKnownChar($char)) {
+                $value = $this->charValue($char);
+                if($sum < $value) {
+                    $sum = $value - $sum;
                 }
             }
         }
         return $sum;
     }
 
+    private function isKnownChar($char)
+    {
+        return in_array($char, array_keys($this->knownChars));    
+    }
+
     private function charValue($char)
     {
-        $values = ["V" => 5, "X" => 10];
-        return $values[$char];
+        return $this->knownChars[$char];
     }
 }
