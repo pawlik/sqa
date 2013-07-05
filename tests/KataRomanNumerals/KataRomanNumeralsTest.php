@@ -48,6 +48,12 @@ class KataRomanNumeralsTest extends \PHPUnit_Framework_TestCase{
             ["VIII", 8],
             ["IX", 9],
             ["X", 10],
+            ["IL", 49],
+            ["L", 50],
+            ["LV", 55],
+            ["IC", 99],
+            ["MIII", 1003], 
+            ["MMDCCLI", 2751]
         ];
     }
 
