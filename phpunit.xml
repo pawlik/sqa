@@ -6,8 +6,8 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          forceCoversAnnotation="false"
-         strict="false"
-         verbose="false">
+         strict="true"
+         verbose="true">
     <testsuites>
         <testsuite name="TestSuite">
             <directory>tests</directory>
